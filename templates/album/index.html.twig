@@ -1,0 +1,40 @@
+{% extends 'unauthenticated_base.html.twig' %}
+
+{% block title %}Gallery{% endblock %}
+
+{% block content %}
+<section>
+    <div class="container">
+        <h1>Albums List</h1>
+        <p>Welcome to our photo gallery! Here is albums list.</p>
+        <div class="card-list">
+            {% for album in paginator.results %}
+            <a href="{{ path('album_paginated', {id: album.id}) }}" class="card">
+                <img src="{{ asset(album.getPrefixedCoverFileName() ) }}">
+                <div class="dark">
+                    <h2>{{ album.getAlbumName() }}</h2>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+        <div class="pagination">
+            {% if paginator.hasPreviousPage %}
+                <a href="{{ path('index', {page: paginator.getPreviousPage}) }}" rel="previous">Previos</a>
+            {% else %}
+            {% endif %}
+            {% if paginator.lastPage > 1 %}
+                {% for i in 1..paginator.lastPage %}
+                    {% if i == paginator.currentPage %}
+                        <a class="active" href="{{ path('index', {page: i}) }}">{{ i }}</a>
+                    {% else %}
+                        <a href="{{ path('index', {page: i}) }}">{{ i }}</a>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+            {% if paginator.hasNextPage %}
+                <a href="{{ path('index', {page: paginator.getNextPage}) }}" rel="next">Next</a>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+{% block header %}
+<header>
+    <div class="container">
+        <div class="logo"><a href="{{ path('index') }}">PhotoGallery</a></div>
+        <div class="buttons">
+            <a href="{{ path("admin") }}" class="login">
+                Log in
+                <span class="login-icon"></span>
+            </a>
+        </div>
+    </div>
+</header>
+{% endblock %}
+{% block content %}{% endblock %}
+{% endblock %}

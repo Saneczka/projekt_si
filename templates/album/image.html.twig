@@ -1,0 +1,35 @@
+{% extends 'unauthenticated_base.html.twig' %}
+
+{% block title %}Gallery{% endblock %}
+
+{% block content %}
+<section>
+    <div class="container">
+        <h1>{{ album.getAlbumName }}</h1>
+        <div class="images">
+            <div class="picked-image">
+                <img src="{{ asset(image.getPrefixedImageFileName) }}" alt="">
+            </div>
+            <h2 class="image-title">
+                {{ image.getImageTitle }}
+            </h2>
+            <div class="image-decription">
+                {{ image.getImageTitle }}
+            </div>
+            <h3>Comments</h3>
+            <div class="comment-list">
+                {% for comment in comments %}
+                <div class="comment-block">
+                    <div class="user">{{ comment.getEmail }}</div>
+                    <div class="user">{{ comment.getNickname }}</div>
+                    <div class="comment">{{ comment.getContent }}</div>
+                </div>
+                {% endfor %}
+            </div>
+            <h3>Add comment</h3>
+            {{ form(form, { 'method': 'POST', 'attr': { 'class': 'comment-form'} }) }}
+        </div>
+    </div>
+
+</section>
+{% endblock %}

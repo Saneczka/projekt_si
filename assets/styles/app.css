@@ -1,0 +1,183 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+header {
+    background: ghostwhite;
+    padding: 30px 0;
+}
+
+section {
+    margin-top: 60px;
+}
+
+.buttons {
+    display: inline-block;
+    float: right;
+}
+
+.logo {
+    display: inline-block;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.container {
+    width: 1000px;
+    margin: auto;
+}
+
+.login {
+    display: inline-block;
+    text-decoration: none;
+    color: gray;
+    margin-top: 5px;
+}
+
+.login-icon {
+    width: 20px;
+    height: 20px;
+    background: url("../../public/images/login-icon.png") no-repeat;
+    background-size: contain;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+h1 {
+    font-size: 36px;
+    margin-top: 90px;
+    margin-bottom: 40px;
+}
+
+.card-list {
+    margin-top: 25px;
+}
+
+.card {
+    width: 246px;
+    height: 246px;
+    display: inline-block;
+    margin-bottom: 4px;
+    position: relative;
+}
+
+.card img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.dark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 90px;
+}
+
+h2 {
+    font-size: 24px;
+    color: white;
+    margin-left: 20px;
+}
+
+p {
+    color: gray;
+}
+
+.pagination {
+    display: inline-block;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    float: right;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.pagination a.active {
+    background-color: cornflowerblue;
+    color: white;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+.picked-image {
+    width: 100%;
+    height: 500px;
+    background: lightgray;
+    margin-bottom: 30px;
+}
+
+.picked-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.images-list {
+    font-size: 0;
+}
+
+.image {
+    width: 180px;
+    height: 180px;
+    display: inline-block;
+    margin: 10px;
+}
+
+.image:hover {
+    cursor: pointer;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+}
+
+.image-title {
+    color: black;
+    margin-left: 10px;
+}
+
+.image-decription {
+    margin-left: 10px;
+    margin-bottom: 50px;
+}
+
+h3 {
+    margin-left: 10px;
+    color: #494949;
+}
+
+#email, #comment{
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.comment-list{
+    margin-bottom: 40px;
+}
+
+.comment-block{
+    background: ghostwhite;
+    padding: 20px 30px;
+    margin-bottom: 20px;
+}
+.comment-block .user{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.comment-form{
+    margin-bottom: 50px;
+}
